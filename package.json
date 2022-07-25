@@ -1,0 +1,42 @@
+{
+  "name": "strapi-plugin-oembed-v4",
+  "version": "1.0.0",
+  "description": "Embed content from third party sites (YouTube, Vimeo, SoundCloud...) in Strapi",
+  "strapi": {
+    "name": "oembed",
+    "displayName": "oEmbed",
+    "icon": "globe-asia",
+    "description": "Embed content from third party sites (YouTube, Vimeo, SoundCloud...) in Strapi",
+    "kind": "plugin"
+  },
+  "dependencies": {
+    "@strapi/design-system": "^0.0.1-alpha.74",
+    "@strapi/helper-plugin": "4.0.7",
+    "axios": "^0.21.1",
+    "lodash": "^4.17.20",
+    "prop-types": "^15.7.2",
+    "react": "16.13.1",
+    "react-intl": "^5.8.8",
+    "react-router-dom": "^5.2.0"
+  },
+  "author": {
+    "name": "Htun"
+  },
+  "homepage": "https://github.com/htunh/strapi-plugin-oembed-v4",
+  "keywords": [
+    "strapi",
+    "plugin",
+    "oembed",
+    "embed",
+    "media",
+    "youtube",
+    "vimeo",
+    "tiktok",
+    "soundcloud"
+  ],
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
