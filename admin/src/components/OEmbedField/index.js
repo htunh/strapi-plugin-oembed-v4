@@ -28,7 +28,15 @@ const OEmbedField = ({
   const [isOpen, setIsOpen] = useState(false);
 
   // Parse the value from string to JSON
-  const parseValue = (val) => JSON.parse(val) || null;
+  const parseValue = (val) => {
+    let parsedValue = null;
+
+    try {
+      parsedValue = JSON.parse(val);
+    } catch {}
+
+    return parsedValue;
+  };
 
   const [draftValue, setDraftValue] = useState(parseValue(value));
 
