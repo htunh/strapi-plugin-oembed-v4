@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useIntl, FormattedMessage } from "react-intl";
+import React, { useEffect, useRef, useState } from "react";
+import { useIntl } from "react-intl";
 import PropTypes from "prop-types";
 import { isObject } from "lodash";
 import {
@@ -11,7 +11,7 @@ import {
 import { Typography } from "@strapi/design-system/Typography";
 import { Button } from "@strapi/design-system/Button";
 import { TextInput } from "@strapi/design-system/TextInput";
-
+import { FormattedMessage } from "react-intl";
 import { axiosInstance, getTrad, getRequestUrl } from "../../utils";
 import pluginId from "../../pluginId";
 
@@ -104,8 +104,8 @@ const ImportModal = ({ onClose, onImport, value }) => {
             validations={{
               required: true,
             }}
-            onChange={({ target }) => {
-              setUrl(target.value);
+            onChange={({ target: { value } }) => {
+              setUrl(value);
             }}
             onKeyDown={keyPress}
             error={inputError}

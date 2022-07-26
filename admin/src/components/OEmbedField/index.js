@@ -13,7 +13,6 @@ import { Typography } from "@strapi/design-system/Typography";
 import { Box } from "@strapi/design-system/Box";
 import { Link } from "@strapi/design-system/Link";
 import { FormattedMessage } from "react-intl";
-
 import ImportModal from "../ImportModal";
 import pluginId from "../../pluginId";
 
@@ -24,6 +23,7 @@ const OEmbedField = ({
   intlLabel,
   onChange,
   value,
+  required,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
